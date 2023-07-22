@@ -1,0 +1,18 @@
+
+<h1>{{title}}</h1>
+
+
+<app-auth (submitted)="login($event)">
+
+  <h1 class="headerclass">Login</h1>
+
+  <button>Login</button>
+  <app-auth-remember (checked)="rememeberUser($event)"></app-auth-remember>
+</app-auth>
+
+<hr/> 
+
+<app-auth (submitted)="singup($event)">
+  <h2 class="headerclass">Signup</h2>
+  <button>singup</button>
+</app-auth>

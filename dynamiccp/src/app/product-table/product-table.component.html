@@ -1,0 +1,17 @@
+
+<table>
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th> Title</th>
+            <th> Price</th>
+        </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor="let p of products | async ">
+                <td>{{p.Id}}</td>
+                <td>{{p.Title}}</td>
+                <td>{{p.Price}}</td>
+          </tr>
+    </tbody>
+</table>

@@ -1,0 +1,41 @@
+<div class="row">
+
+<input class="form-control" [(ngModel)]="txtSearch" 
+type="text" placeholder="type to filter" />
+</div>
+<table class="table">
+  <thead>
+     <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Color</th>
+        <th></th>
+        <!-- <th></th> -->
+     </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of products | productSearch : txtSearch ">
+  <td>{{p.Id}}</td>
+  <td [style.color]="p.Color">{{p.Title | uppercase}}</td>
+  <td>{{p.Price | currency}}</td>
+  <td>{{p.Color}}</td>
+  <!-- <td><button class="btn btn-info" [disabled]="!p.inStock">Buy</button></td> -->
+  <td>
+   <ng-container *ngIf="p.inStock == true then  buy else notify " ></ng-container>
+   <ng-template #buy>
+      <button class="btn btn-info">Buy</button>
+      <button class="btn btn-danger">Add to Cart</button>
+   </ng-template>
+   <ng-template #notify>
+      <button class="btn btn-danger">Notify Me</button>
+      <!-- <app-foo></app-foo> -->
+   </ng-template>
+
+ 
+  </td>
+  <!-- <td></td> -->
+  </tr>
+  </tbody>
+</table>
+

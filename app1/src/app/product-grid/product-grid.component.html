@@ -1,0 +1,11 @@
+
+<div class="row" *ngFor="let p of products">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{p.Title}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{p.Price}}</h6>
+          <p class="card-text">color : {{p.Color}} |  inStock:{{p.inStock}}</p>
+          <a href="#" class="card-link">Buy</a>
+        </div>
+      </div>
+</div>

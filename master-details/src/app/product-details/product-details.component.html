@@ -1,0 +1,35 @@
+
+<div class="row">
+    <h2>Details of {{ProductDetails?.Product?.Id}}</h2>
+    <table class="table">
+       <tbody>
+        <tr>
+            <td>Id</td>
+            <td>{{ProductDetails?.Product?.Id}}</td>
+        </tr>
+        <tr>
+            <td>Title</td>
+            <td>{{ProductDetails?.Product?.Title}}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{ProductDetails?.Product?.Price}}</td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td>{{ProductDetails?.Color}}</td>
+        </tr>
+        <tr>
+            <td>Qunatity</td>
+            <td>{{ProductDetails?.Quantity}}</td>
+        </tr>
+        <tr>
+            <td>Distributor</td>
+            <td>{{ProductDetails?.Distributor}}</td>
+        </tr>
+        <tr>
+            <button (click)="hideDetails()" class="btn btn-warning">Close</button>
+        </tr>
+       </tbody>
+    </table>
+</div>

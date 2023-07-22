@@ -1,0 +1,30 @@
+
+<div>
+    <form (ngSubmit)='login()' [formGroup]="loginForm" novalidate>
+        <input formControlName="Email" type="text" placeholder="Enter Email" />
+       <div *ngIf="loginForm.get('Email')?.hasError('required') && loginForm?.get('Email')?.touched ">
+           Email is required
+       </div>
+        <br/>
+        <input formControlName="Password" type="text" placeholder="Enter Password" />
+        <br/>
+        <input formControlName="Age" type="number" placeholder="Enter Age" />
+        <div *ngIf="loginForm.get('Age')?.hasError('ageRange') && loginForm?.get('Age')?.touched ">
+            Age should be in between {{minAge}} - {{maxAge}}
+        </div>
+        <br/>
+        <input formControlName="Phone" type="text" placeholder="Enter Phone" />
+        <div *ngIf="loginForm.get('Phone')?.hasError('required') && loginForm?.get('Phone')?.touched ">
+            Phone is required to send notification
+        </div>
+        <br/>
+        <label class="radio-inline">
+            <input type="radio" value="Email" formControlName="Notification">Email
+        </label>
+        <label class="radio-inline">
+            <input type="radio" value="Phone" formControlName="Notification">Phone
+        </label>
+        <br/>
+        <button [disabled]="loginForm.invalid">Login</button>
+    </form>
+</div>

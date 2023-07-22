@@ -1,0 +1,16 @@
+
+<div>
+    name = {{name}}
+    <br/>
+    height = {{height}}
+    <br/>
+    width = {{width}}
+    <br/>
+    <button [style.height.px]="height" 
+    [style.width.px]="width" 
+    (click)="changeHeight()">Change dimension</button>
+    <br/>
+    <input type="text" [(ngModel)]="name" />
+</div>
+
+<h1>Hello {{name}}</h1>

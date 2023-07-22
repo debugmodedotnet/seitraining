@@ -1,0 +1,8 @@
+
+
+<div *ngFor="let p of products | async">
+    Id : {{p.Id}}
+    Title : {{p.Title}}
+    Price : {{p.Price}}
+    <button (click)="showDetails(p)">Show Details</button>
+</div>

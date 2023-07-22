@@ -1,0 +1,13 @@
+<h2>{{title}}</h2>
+<app-child1  #c1 (parnetButtonDisabledEvent)="disableButton($event)" [count]="counter" [foo]="9"></app-child1>
+
+<hr/>
+
+<app-child2 [foo]="99"></app-child2>
+
+<button [disabled]="isButtonDisabled" (click)="changeCount()">Change Count</button>
+<!-- <div>
+    <app-child2 #lsnfsnfdsn></app-child2>
+</div> -->
+
+
